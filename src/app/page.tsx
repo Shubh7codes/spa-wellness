@@ -1,11 +1,14 @@
 import Header from "@/components/layout/Header";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main className="min-h-screen bg-[#F8F3EC]" />
+      <main>
+        <Hero />
+      </main>
     </>
   );
 }
