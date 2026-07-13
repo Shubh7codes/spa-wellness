@@ -1,28 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, Geist } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
+
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const inter = Inter({
+const heading = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
 });
 
-const cormorant = Cormorant_Garamond({
+const body = Manrope({
   subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Aura Spa",
-    template: "%s | Aura Spa",
-  },
+  title: "SERANE | Luxury Wellness & Skin Clinic",
   description:
-    "Luxury wellness experiences designed to restore your body and mind.",
+    "Luxury wellness, beauty and skin clinic built with Next.js.",
 };
 
 export default function RootLayout({
@@ -31,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en">
       <body
-        className={`${inter.variable} ${cormorant.variable} antialiased`}
+        className={`${heading.variable} ${body.variable} antialiased`}
       >
         {children}
       </body>

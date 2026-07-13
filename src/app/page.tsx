@@ -1,9 +1,11 @@
-import Image from "next/image";
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Aura Spa</h1>
-    </main>
+    <>
+      <Header />
+
+      <main className="min-h-screen bg-[#F8F3EC]" />
+    </>
   );
 }
