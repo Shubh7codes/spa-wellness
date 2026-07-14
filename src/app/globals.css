@@ -1,21 +1,30 @@
 @import "tailwindcss";
 
+/* ------------------------------ */
+/* Theme Variables                */
+/* ------------------------------ */
+
 :root {
   --background: #f8f3ec;
-  --surface: #fffdf9;
-
-  --text: #2b2623;
-  --muted: #7b726d;
+  --foreground: #2b2623;
 
   --primary: #a44e4b;
-  --secondary: #d8c1a0;
+  --secondary: #f4ebe3;
 
-  --border: #ece5dd;
+  --border: #e7ddd5;
+
+  --card: #ffffff;
+
+  --muted: #7d736d;
+
+  --shadow: rgba(0, 0, 0, 0.08);
+
+  --radius: 24px;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* ------------------------------ */
+/* Base                           */
+/* ------------------------------ */
 
 html {
   scroll-behavior: smooth;
@@ -23,8 +32,21 @@ html {
 
 body {
   background: var(--background);
-  color: var(--text);
+  color: var(--foreground);
+
   font-family: var(--font-body);
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -36,7 +58,128 @@ h6 {
   font-family: var(--font-heading);
 }
 
+button {
+  cursor: pointer;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ------------------------------ */
+/* Selection                      */
+/* ------------------------------ */
+
 ::selection {
   background: var(--primary);
   color: white;
+}
+
+/* ------------------------------ */
+/* Scrollbar                      */
+/* ------------------------------ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(90%);
+}
+
+/* ------------------------------ */
+/* Glass Utilities                */
+/* ------------------------------ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(22px);
+
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(22px);
+
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ------------------------------ */
+/* Utilities                      */
+/* ------------------------------ */
+
+.section-padding {
+  padding-block: 8rem;
+}
+
+.container-width {
+  width: min(1280px, calc(100% - 2rem));
+
+  margin-inline: auto;
+}
+
+.card-shadow {
+  box-shadow:
+    0 10px 35px var(--shadow),
+    0 30px 70px var(--shadow);
+}
+
+.button-shadow {
+  box-shadow:
+    0 14px 35px rgba(164, 78, 75, 0.25);
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+
+  outline-offset: 3px;
+}
+
+/* ------------------------------ */
+/* Mobile                         */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section-padding {
+    padding-block: 5rem;
+  }
 }
