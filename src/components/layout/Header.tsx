@@ -2,7 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import useScroll from "@/hooks/useScroll";
 
