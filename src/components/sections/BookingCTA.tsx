@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 
 import Container from "@/components/ui/Container";
-import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function BookingCTA() {
   return (
@@ -161,7 +160,7 @@ export default function BookingCTA() {
 
               <div className="mt-8 rounded-2xl bg-white/10 p-5">
                 <p className="text-sm uppercase tracking-[0.25em] text-white/70">
-                  Today's Availability
+                  Today&apos;s Availability
                 </p>
 
                 <h4 className="mt-2 text-3xl font-heading">

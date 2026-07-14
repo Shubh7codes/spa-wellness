@@ -63,8 +63,8 @@ export default function WhyChoose() {
                 text-[#6B625D]
               "
             >
-              At SERANE, wellness isn't simply a treatment—
-              it's a carefully crafted journey. Every detail,
+              At SERANE, wellness isn&apos;t simply a treatment—
+              it&apos;s a carefully crafted journey. Every detail,
               from the atmosphere to the therapies, is designed
               to help you reconnect with yourself.
             </p>

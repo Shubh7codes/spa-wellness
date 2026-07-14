@@ -94,7 +94,7 @@ export default function TestimonialCard({
           text-[#6B625D]
         "
       >
-        "{testimonial.review}"
+        &quot;{testimonial.review}&quot;
       </p>
     </motion.article>
   );

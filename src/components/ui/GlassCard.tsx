@@ -94,7 +94,7 @@ export default function GlassCard() {
             </h4>
 
             <p className="mt-1 text-sm leading-6 text-[#6B625D]">
-              Organic ingredients inspired by nature's
+              Organic ingredients inspired by nature&apos;s
               healing touch.
             </p>
           </div>

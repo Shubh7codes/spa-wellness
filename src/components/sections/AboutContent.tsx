@@ -64,7 +64,7 @@ export default function AboutContent() {
         At SERANE, every experience is thoughtfully crafted to
         restore harmony between body and mind. Our therapies
         combine traditional healing rituals with modern luxury,
-        creating moments of deep relaxation you'll remember long
+        creating moments of deep relaxation you&apos;ll remember long
         after your visit.
       </p>
 
